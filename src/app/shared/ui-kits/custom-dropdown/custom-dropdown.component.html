@@ -1,0 +1,26 @@
+<div class="custom-dropdown-container {{mainClassName}}" (appClickOutside)="onCLickOutside()" [class.active]="false">
+  <img alt="" class="arrow-icon" src="assets/images/dropdown-arrow.svg">
+
+  <div (click)="toggleDropdown($event)" class="custom-dropdown-menu">
+    <span
+      [innerText]="selectedItem ? selectedItem[keyName] : defaultTitle"
+      [ngStyle]="{'color': selectedItem ? '#194866' : 'gray'}"
+    ></span>
+    <i class="fa fa-angle-down"></i>
+  </div>
+
+  <div *ngIf="showMenuItems" class="custom-menu-items-list">
+
+    <div *ngIf="showSearch" class="search-container">
+      <img alt="" class="search-icon" src="assets/images/search.svg">
+      <input [(ngModel)]="searchText" class="search-input" placeholder='{{"Search" | translate}}' type="text">
+    </div>
+
+    <div (click)="selectItem(item)" *ngFor="let item of items | filter : searchText" class="menu-item">
+      <span [innerText]="item[keyName]"></span>
+    </div>
+    <div *ngIf="items.length == 0" class="empty-dropdown-data">No data to display.</div>
+  </div>
+
+  <div (click)="showMenuItems = false" *ngIf="showMenuItems" class="top-bar-overlay"></div>
+</div>

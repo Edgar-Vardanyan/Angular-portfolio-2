@@ -1,0 +1,129 @@
+$smallScreen: 576px;
+$mediumScreen: 768px;
+$largeScreen: 992px;
+$extraLarge: 1200px;
+
+$brandYellow: var(--brandYellow);
+$brandBlue: var(--brandBlue);
+$brandPink: var(--brandPink);
+$brandPurple: var(--brandPurple);
+$brandBlack: var(--brandBlack);
+$darkGray: var(--darkGray);
+$textGray: var(--textGray);
+$mediumGray: var(--mediumGray);
+$brandGray: var(--brandGray);
+$lightGray: var(--lightGray);
+$lightestGray: var(--lightestGray);
+$brandWhite: var(--brandWhite);
+
+$positiveGreen: var(--positiveGreen);
+$yellowCautious: var(--yellowCautious);
+$negativeRed: var(--negativeRed);
+$blueInformation: var(--blueInformation);
+
+$green10: var(--green10);
+$red50: var(--red50);
+$red10: var(--red10);
+
+$yellow80: var(--yellow80);
+$yellow50: var(--yellow50);
+$yellow30: var(--yellow30);
+$yellow10: var(--yellow10);
+
+$pink80: var(--pink80);
+$pink50: var(--pink50);
+$pink30: var(--pink30);
+$pink10: var(--pink10);
+
+$blue80: var(--blue80);
+$blue50: var(--blue50);
+$blue30: var(--blue30);
+$blue10: var(--blue10);
+
+$fontSize: var(--fontSize);
+$lineHeight: var(--lineHeight);
+$lineHeightMed: var(--lineHeightMed);
+
+$smallFontSize: var(--smallFontSize);
+$smallLineHeight: var(--smallLineHeight);
+
+$h1Size: var(--h1Size);
+$h2Size: var(--h2Size);
+$h3Size: var(--h3Size);
+
+$borderRadiusL: var(--borderRadiusL);
+$borderRadiusM: var(--borderRadiusM);
+$borderRadiusS: var(--borderRadiusS);
+
+$shadowSoft: var(--shadowSoft);
+$shadowMid: var(--shadowMid);
+$shadowStrong: var(--shadowStrong);
+$shadowStronger: var(--shadowStronger);
+
+$mainFontFamily: var(--mainFontFamily);
+
+$fontWeight: var(--fontWeight);
+$boldFont: var(--boldFont);
+$bolderFont: var(--bolderFont);
+$boldestFont: var(--boldestFont);
+
+$sidebarWidth: var(--sidebarWidth);
+
+:root {
+  --brandYellow: #EEA941;
+  --brandBlue: #4D85D5;
+  --brandPink: #DA486B;
+  --brandPurple: #28192D;
+  --brandBlack: #212121;
+  --brandGray: #E5E5EA;
+  --darkGray: #383B3D;
+  --textGray: #5A5D63;
+  --mediumGray: #AEAEB5;
+  --lightGray: #F0F0F4;
+  --lightestGray: #FAFAFC;
+  --brandWhite: #FFFFFF;
+
+  --positiveGreen: #24A37D;
+  --green10: #E9F6F2;
+
+  --negativeRed: #E25B5B;
+  --red50: #F1ADAD;
+  --red10: #FCEFEF;
+
+  --yellow80: #F1BA67;
+  --yellow50: #F6D4A0;
+  --yellow30: #FAE5C6;
+  --yellow10: #FCEED9;
+
+  --pink80: #E16D89;
+  --pink50: #ECA3B5;
+  --pink30: #F4C8D2;
+  --pink10: #FBECF0;
+
+  --blue80: #719DDD;
+  --blue50: #A6C2EA;
+  --blue30: #C9DAF2;
+  --blue10: #EDF3FB;
+
+  --fontSize: 13px;
+  --lineHeightMed: 20px;
+  --lineHeight: 22px;
+
+  --smallFontSize: 11px;
+  --smallLineHeight: 19px;
+
+  --h1Size: 24px;
+  --h2Size: 16px;
+  --h3Size: 13px;
+
+  --borderRadiusL: 16px;
+  --borderRadiusM: 8px;
+  --borderRadiusS: 4px;
+
+  --mainFontFamily: 'Assistant', serif;
+  --fontWeightLight: 300;
+  --fontWeight: 400;
+  --boldFont: 500;
+  --bolderFont: 600;
+  --boldestFont: 700;
+}

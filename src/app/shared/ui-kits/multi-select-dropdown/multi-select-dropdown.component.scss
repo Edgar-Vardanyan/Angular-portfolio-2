@@ -1,0 +1,126 @@
+.main-container {
+  margin-bottom: 16px;
+  height: 48px;
+
+  .multi-select-container {
+    position: relative;
+    cursor: pointer;
+
+    .selected-items {
+      font-family: 'Assistant', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #194866;
+      margin-left: 16px;
+    }
+
+    .arrow {
+      position: absolute;
+      margin-top: 21px;
+      z-index: 99;
+      left: 376px;
+      cursor: pointer;
+      pointer-events: none;
+    }
+
+    .drop-toggle {
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+      width: 400px;
+      height: 48px;
+      border: 0.5px solid rgba(25, 72, 102, 0.8);
+      box-sizing: border-box;
+      border-radius: 10px;
+      margin: 0 4px 16px 4px;
+      text-align: start;
+      background: #F8F8F8;
+
+
+      i {
+        float: right;
+      }
+
+      .default-text {
+        font-family: var(--mainFontFamily);
+        font-style: normal;
+        font-weight: var(--fontWeight);
+        font-size: 16px;
+        line-height: 24px;
+        color: #194866;
+        background: #F8F8F8;
+        margin-left: 16px;
+        color: gray;
+      }
+    }
+
+    .drop-show {
+      width: 400px;
+      height: 188px;
+
+      background: #FFFFFF;
+      border: 0.2px solid rgba(25, 72, 102, 0.5);
+      box-sizing: border-box;
+      box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      padding: 4px;
+      position: absolute;
+      z-index: 100;
+      -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      margin-left: 4px;
+      overflow: auto;
+
+      .search-container {
+
+
+        .search-input {
+
+          width: 390px;
+          border: none;
+          border-bottom: 1px solid gray;
+          padding: 13px 13px 13px 36px;
+          outline: none;
+        }
+
+        .search-icon {
+          position: absolute;
+          margin-top: 14px;
+          left: 14px;
+        }
+
+      }
+
+      .checkbox {
+
+        &:checked {
+          background: #34C88A;
+          border-radius: 2px;
+        }
+
+        background: #34C88A;
+        border-radius: 2px;
+      }
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        input {
+          vertical-align: top;
+        }
+
+        span {
+          display: inline-block;
+        }
+      }
+    }
+
+
+  }
+
+}
+

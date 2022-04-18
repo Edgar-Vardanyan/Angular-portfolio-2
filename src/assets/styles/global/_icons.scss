@@ -1,0 +1,40 @@
+$globalIconPath: '~assets/images/icons/';
+
+%iconStyles {
+  @include square(16px);
+  display: inline-block;
+  @extend %bgImageContain;
+}
+
+@mixin bgIcon($class, $iconType: 'svg') {
+  background-image: url("#{$globalIconPath}#{$class}.#{$iconType}");
+  @extend %iconStyles;
+}
+
+$iconsArray: ();
+
+@each $class, $hover, $type in $iconsArray {
+  $iconType: $type;
+
+  @if $type == null {
+    $iconType: 'svg';
+  }
+
+  .sw-#{$class} {
+    @include bgIcon($class, $iconType);
+
+    &:hover {
+      @if $hover != null {
+        @include bgIcon($hover);
+
+        &.skip-hover {
+          @include bgIcon($class, $iconType);
+        }
+
+      }
+    }
+
+  }
+
+}
+

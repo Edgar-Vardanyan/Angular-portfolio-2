@@ -1,0 +1,23 @@
+$globalImagePath: '~assets/images/';
+
+@mixin bgImage($class, $imageType: 'svg') {
+  background-image: url("#{$globalImagePath}#{$class}.#{$imageType}");
+  @extend %bgImageContain;
+}
+
+$imagesArray: ();
+
+@each $class, $type in $imagesArray {
+  $imageType: $type;
+
+  @if $type == null {
+    $imageType: 'svg';
+  }
+
+  .bg-image-#{$class} {
+    @include bgImage($class, $imageType);
+  }
+
+}
+
+

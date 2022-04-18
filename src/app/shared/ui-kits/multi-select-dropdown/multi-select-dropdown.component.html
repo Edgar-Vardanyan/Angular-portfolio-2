@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div class="multi-select-container" (appClickOutside)="onCLickOutside()">
+    <img class="arrow" src="assets/images/dropdown-arrow.svg">
+    <button (click)="showDropDown=!showDropDown"
+            class="drop-toggle btn flat">
+      <span
+        *ngIf="checkedList.length<=0"
+        class="default-text">
+        {{defaultText}}</span>
+      <span *ngIf="checkedList.length>0" class="selected-items">{{checkedList.join(', ')}}</span>
+      <i class="fa fa-angle-down"></i>
+    </button>
+    <div *ngIf="showDropDown" class="drop-show">
+      <div *ngIf="showSearch" class="search-container">
+        <img alt="" class="search-icon" src="assets/images/search.svg">
+        <input [(ngModel)]="searchText" class="search-input" placeholder='{{"Search" | translate}}' type="text">
+      </div>
+      <label *ngFor="let a of list | filter : searchText" class="select-list">
+        <span>{{a.name | translate}}</span>
+        <input (change)="getSelectedValue(a.checked,a.name)" [(ngModel)]="a.checked" class="checkbox"
+               type="checkbox"/>
+      </label>
+    </div>
+  </div>
+</div>

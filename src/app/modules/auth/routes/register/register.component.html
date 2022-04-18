@@ -1,0 +1,191 @@
+<div class="register-page">
+  <div class="form-container">
+
+    <div class="title">
+      <h1>{{'Sign Up' | translate}}</h1>
+      <p>{{'It’s quick and easy.' | translate}}</p>
+    </div>
+
+    <hr>
+
+    <form [formGroup]="addForm" class="form">
+
+      <div class="input-container">
+
+        <div class="name-input-container">
+
+          <input
+            [ngClass]="{'input-error': addForm.get('name').invalid && isSubmitted }"
+            class="input-field"
+            formControlName="name"
+            placeholder='{{"Name" | translate}}'>
+
+          <div
+            *ngIf="addForm.get('name').invalid && isSubmitted"
+            class="error">
+            {{'Name is required' | translate}}
+          </div>
+
+        </div>
+
+        <div class="last-name-input-container">
+
+          <input
+            [ngClass]="{'input-error': addForm.get('lastName').invalid && isSubmitted }"
+            class="input-field last-name"
+            formControlName="lastName"
+            placeholder='{{"Last Name" | translate}}'
+          >
+
+          <div
+            *ngIf="addForm.get('lastName').invalid && isSubmitted"
+            class="error">
+            {{'Last Name is required' | translate}}
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="email-input-container">
+
+        <input
+          [ngClass]="{'input-error': addForm.get('email').invalid && isSubmitted }"
+          class="input-field long"
+          formControlName="email"
+          placeholder='{{"Email" | translate}}'
+        >
+
+        <div
+          *ngIf=" addForm.get('email').invalid && isSubmitted"
+          class="error">
+          {{'Email is required' | translate}}
+        </div>
+
+        <div
+          *ngIf="addForm.get('email').invalid && isSubmitted"
+          class="error">
+          {{'Email is not correct' | translate}}
+        </div>
+
+      </div>
+
+      <div class="phone-container">
+
+        <div
+          [ngClass]="{'phone-error': addForm.get('phone').invalid && isSubmitted }"
+          class="country-code">+374
+        </div>
+        <input
+          [ngClass]="{'input-error': addForm.get('phone').invalid && isSubmitted }"
+          class="input-field phone"
+          formControlName="phone"
+          maxlength="8"
+          minlength="8"
+          oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          placeholder="999999999"
+          type="number"
+        >
+
+        <div
+          *ngIf="addForm.get('phone').invalid && isSubmitted"
+          class="error">
+          {{'Phone number is not correct' | translate}}
+        </div>
+
+      </div>
+
+      <div class="region-wrapper">
+        <custom-dropdown-component
+          [data]="regionList"
+          [keyName]="'name'"
+          [showSearch]=false
+          defaultTitle='{{"Region" | translate}}'
+        ></custom-dropdown-component>
+      </div>
+
+
+      <div class="city-wrapper">
+        <custom-dropdown-component
+          [data]="cityList"
+          [keyName]="'name'"
+          defaultTitle='{{"City, Village" | translate}}'
+        ></custom-dropdown-component>
+      </div>
+
+
+      <div class="school-wrapper">
+        <custom-dropdown-component
+          [data]="schoolList"
+          [keyName]="'name'"
+          defaultTitle='{{"School" | translate}}'
+        ></custom-dropdown-component>
+      </div>
+
+
+      <div class='subject-wrapper'>
+        <app-multi-select-dropdown
+          [data]="cityList"
+          defaultText='{{"Subject" | translate}}'
+        ></app-multi-select-dropdown>
+      </div>
+
+
+      <div class="grade-wrapper">
+        <app-multi-select-dropdown
+          [data]="gradeList"
+          defaultText='{{"Grade" | translate}}'
+          [showSearch]=false>
+        </app-multi-select-dropdown>
+      </div>
+
+
+      <div class="password-input-container">
+
+        <img (click)="showPassword()" alt="" class="password-icon" src="assets/images/password.svg">
+
+        <input
+          [ngClass]="{'input-error': addForm.get('password').invalid && isSubmitted }"
+          class="input-field long"
+          formControlName="password"
+          placeholder='{{"Password" | translate}}'
+          [type]="passwordInputType">
+
+        <div
+          *ngIf=" addForm.get('password').invalid && isSubmitted"
+          class="error">
+          {{'Password is required' | translate}}
+        </div>
+
+      </div>
+
+      <div class="password-input-container">
+
+        <img (click)="showPasswordConfirm()" alt="" class="password-icon" src="assets/images/password.svg">
+
+        <input
+          [ngClass]="{'input-error': addForm.get('confirmPassword').invalid && isSubmitted }"
+          class="input-field long"
+          formControlName="confirmPassword"
+          placeholder='{{"Confirm Password" | translate}}'
+          [type]="confirmPasswordInputType">
+
+        <div
+          *ngIf=" addForm.get('confirmPassword').invalid && isSubmitted"
+          class="error">
+          {{'Password is required' | translate}}
+        </div>
+
+      </div>
+
+      <a class="register-donor-link">{{'Register as a Donor' | translate}}</a>
+
+
+      <div>
+        <button (click)="onSubmit(addForm)" class="submit-btn" type="submit">{{'Ok' | translate}}</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

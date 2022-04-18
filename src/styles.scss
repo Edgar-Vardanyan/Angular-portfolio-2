@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap');
+@import 'toastr2/dist/toastr.min.css';
+@import '~ngx-toastr/toastr';
+@import "assets/styles/main";
+
+* {
+  margin: 0;
+}
+
+app-sign-up {
+  @extend %flexCenterCenter;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,115 @@
+.custom-dropdown-container {
+  position: relative;
+  width: 400px;
+  height: 48px;
+  border: 0.5px solid rgba(25, 72, 102, 0.8);
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0px 4px 16px 4px;
+
+  .arrow-icon {
+    position: absolute;
+    margin-top: 20px;
+    left: 370px;
+    cursor: pointer;
+    pointer-events: none;
+  }
+}
+
+
+.custom-dropdown-menu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 45px;
+
+  span {
+    font-family: $mainFontFamily;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: 16px;
+    line-height: 24px;
+    color: #194866;
+    margin-left: 16px;
+    color: gray;
+  }
+
+  i.fa-angle-down {
+    font-size: 18px;
+    color: #8c8c8c;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.custom-menu-items-list {
+  position: absolute;
+  z-index: 1075;
+  overflow: auto;
+  margin-top: 10px;
+  width: 400px;
+  height: 188px;
+
+  background: #FFFFFF;
+  border: 0.2px solid rgba(25, 72, 102, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+
+  .search-container {
+
+
+    .search-input {
+
+      width: 394px;
+      border: none;
+      border-bottom: 1px solid gray;
+      padding: 13px 13px 13px 36px;
+      outline: none;
+    }
+
+    .search-icon {
+      position: absolute;
+      margin-top: 14px;
+      left: 14px;
+    }
+
+  }
+
+
+  .menu-item {
+    cursor: pointer;
+    padding: 9px 13px;
+    display: block;
+    font-family: $mainFontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    color: rgba(61, 61, 61, 0.8);
+
+    .fa {
+      font-size: 14px;
+      position: relative;
+      top: 2px;
+      margin-right: 5px;
+      width: 13px;
+      height: 13px;
+      border: 0.5px solid #cecece;
+    }
+
+    .fa-check:before {
+      font-size: 10px;
+      position: relative;
+      top: -2.5px;
+      left: 1px;
+    }
+  }
+}
+
+.empty-dropdown-data {
+  padding: 9.5px;
+  font-size: 12px;
+}

@@ -1,0 +1,123 @@
+.header {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: #34C88A;
+  width: 100%;
+  height: 120px;
+
+  .header-logo {
+    @extend %flexCenterCenter;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 4px;
+
+    .logo {
+
+    }
+
+    .logo-text {
+      color: #FFFFFF;
+      text-align: center;
+    }
+  }
+
+  .languages {
+    top: 0;
+    position: absolute;
+    width: 100%;
+
+    .languages-list-container {
+      @extend %flexEnd;
+      align-items: center;
+
+      .active {
+        color: #F8F8F8;
+      }
+
+
+      li {
+        &:last-child {
+          margin-right: 16px;
+        }
+
+        color: rgba(255, 255, 255, 0.5);
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: $boldestFont;
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        text-transform: capitalize;
+        margin: 6px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header-link-container {
+    @extend %flexCenterCenter;
+    top: 91px;
+    position: absolute;
+    width: 100%;
+
+
+    .link-list-container {
+      @extend %flexCenterCenter;
+
+      .teachers {
+        border-bottom: 2px solid #F8F8F8;
+      }
+
+      .active {
+        border-bottom: 2px solid #F8F8F8;
+      }
+
+      li {
+        margin-right: 16px;
+        color: #F8F8F8;
+        cursor: pointer;
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: $lineHeight;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .sign-in-container {
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+
+    .sign-in {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 100px;
+      white-space: nowrap;
+
+
+      .icon {
+        margin-right: 6px;
+      }
+
+      .sing-in-text {
+        color: #F8F8F8;
+        cursor: pointer;
+        font-family: $mainFontFamily;
+        font-style: normal;
+        font-weight: $boldestFont;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        text-transform: capitalize;
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  //scroll-behavior: smooth;
+  //scroll-behavior: auto;
+  //touch-action: manipulation; // disables double tap zoom
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  @include scroll-bar();
+
+  body {
+    background-color: $lightestGray;
+    min-height: 100vh;
+    font-family: $mainFontFamily;
+
+    * {
+      @include scroll-bar();
+    }
+
+    &.pointer-events-none {
+      pointer-events: none;
+
+      * {
+        pointer-events: none;
+      }
+    }
+
+
+    :focus {
+      outline: none;
+    }
+
+    h1 {
+      font-size: $h1Size;
+      line-height: 32px;
+    }
+
+    h2 {
+      font-size: $h2Size;
+      line-height: 24px;
+    }
+
+    h3 {
+      font-size: $h3Size;
+      line-height: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: $mainFontFamily;
+      font-weight: $boldestFont;
+    }
+
+
+    a[href] {
+      color: $brandBlue;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    input[type="color"] {
+      padding: 0;
+      margin: 0;
+      border: 1px solid rgba(0, 0, 0, .1);
+      border-radius: 50px;
+      background: none;
+      box-shadow: $shadowStronger;
+      cursor: pointer;
+      @include square(24px);
+      display: block;
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    input[type="color"]::-webkit-color-swatch {
+      border: none;
+      border-radius: 50px;
+    }
+
+    input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+      cursor: pointer;
+    }
+
+    .contents {
+      display: contents;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    .sw-ellipsis {
+      @extend %ellipsis;
+    }
+
+    .sw-wordwrap {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .sw-backdrop {
+      @include backdrop();
+    }
+
+    .mt-16 {
+      margin-top: 16px;
+    }
+
+    .mt-8 {
+      margin-top: 8px;
+    }
+
+    .mt-40 {
+      margin-top: 40px;
+    }
+
+    .mb-16 {
+      margin-bottom: 16px;
+    }
+
+  }
+}

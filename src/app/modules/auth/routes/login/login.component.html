@@ -1,0 +1,46 @@
+<div class="register-page">
+  <div class="form-container">
+
+    <div class="title">
+      <h1>{{'Sign Up' | translate}}</h1>
+      <p>{{'It’s quick and easy.' | translate}}</p>
+    </div>
+
+    <hr>
+
+    <form [formGroup]="addForm" class="form">
+
+      <div class="email-input-container">
+
+        <input
+          [ngClass]="{'input-error': (addForm.get('email').untouched || addForm.get('email').touched) && addForm.get('email').invalid && isSubmitted }"
+          class="input-field long"
+          formControlName="email"
+          placeholder='{{"Email" | translate}}'
+        >
+
+        <div
+          *ngIf="(addForm.get('email').untouched || addForm.get('email').touched) && addForm.get('email').invalid && isSubmitted"
+          class="error">
+          {{'Email is required' | translate}}
+        </div>
+
+        <div
+          *ngIf="(addForm.get('email').untouched || addForm.get('email').touched) && addForm.get('email').invalid && isSubmitted"
+          class="error">
+          {{'Email is not correct' | translate}}
+        </div>
+
+      </div>
+
+      <a class="register-donor-link" routerLink="/auth/register">Register</a>
+
+
+      <div>
+        <button (click)="onSubmit(addForm)" class="submit-btn" type="submit">{{'Ok' | translate}}</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
